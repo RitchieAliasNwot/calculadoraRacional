@@ -11,7 +11,7 @@ abstract class Operacion {
 
     public function __construct(string $cadena) {
         $posicionOperador = $this->obtenerPosicionOperador($cadena);
-        $this->operando1 = substr($cadena, 0, $posicionOperador-1);
+        $this->operando1 = substr($cadena, 0, $posicionOperador); // posicion - 1
         $this->operando2 = substr($cadena, $posicionOperador+1);
         $this->operador = $cadena[$posicionOperador];
     }
